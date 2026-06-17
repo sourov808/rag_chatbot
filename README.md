@@ -9,10 +9,6 @@ A high-performance, full-stack **Retrieval-Augmented Generation (RAG)** chatbot 
 
 ### Document Ingestion & Vector Storage
 ![Upload and Ingestion Modal](public/screenshot_upload.png)
-
-### 🎥 Demo Walkthrough
-<video src="public/rag_chatbot.mp4" width="100%" controls></video>
-
 ## 🔗 Live Demo
 **[Try it live →](https://rag-chatbot-showcase.vercel.app)**
 
