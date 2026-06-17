@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 Multi-Model RAG Chatbot
 
-## Getting Started
+A high-performance, full-stack **Retrieval-Augmented Generation (RAG)** chatbot that allows you to upload document collections (PDF, TXT, MD) and chat with them using modern LLM providers. Features semantic search citation tracking and full dark/light theme options with a premium glassmorphic interface.
 
-First, run the development server:
+## 📸 Preview
 
+### Conversational Q&A & Citation References
+![DocBot Q&A Interface](public/screenshot.png)
+
+### Document Ingestion & Vector Storage
+![Upload and Ingestion Modal](public/screenshot_upload.png)
+
+### 🎥 Demo Walkthrough
+<video src="public/rag_chatbot.mp4" width="100%" controls></video>
+
+## 🔗 Live Demo
+**[Try it live →](https://rag-chatbot-showcase.vercel.app)**
+
+## ✨ Features
+- **📂 Document Collections** — Create custom document scopes (e.g. `finance_q4`, `hr_policies`) and easily switch between them.
+- **📚 Multi-Format Ingestion** — Drop PDFs, TXT files, and Markdown documents to instantly parse and store their embeddings.
+- **🤖 Multi-Model Support** — Query your documents using **Google Gemini**, **Groq**, or **Ollama** (local models).
+- **🗄️ Multi-Vector DB Options** — Compatible with **Pinecone** (cloud) and **Qdrant** (local/cloud) vector search engines.
+- **📍 Cited Sources** — Each answer highlights exact files and section numbers referenced by the model, eliminating AI hallucinations.
+
+## 🛠️ Tech Stack
+- **Framework:** Next.js (App Router) + TypeScript
+- **RAG & Agent Orchestration:** **LangChain** (Core, Community, Text Splitters)
+- **Vector DB Clients:** `@qdrant/js-client-rest`, `@pinecone-database/pinecone`
+- **Supported Models:** `@chain/google-genai` (Gemini), `@langchain/groq`, `@langchain/ollama`
+- **Document Parser:** `pdf-parse`
+- **Styling:** Tailwind CSS v4
+
+## 🚀 Run Locally
+
+### 1. Clone & Install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/sourov808/rag_chatbot.git
+cd rag_chatbot
+pnpm install
 ```
 
+### 2. Configure Environment Variables
+Create a `.env.local` file in the root directory:
+```env
+GOOGLE_API_KEY=your_gemini_api_key
+GROQ_API_KEY=your_groq_api_key
+
+# Qdrant Database Settings
+QDRANT_URL=your_qdrant_url
+QDRANT_API_KEY=your_qdrant_api_key
+```
+
+### 3. Run Development Server
+```bash
+pnpm dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
