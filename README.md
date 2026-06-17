@@ -9,8 +9,8 @@ A high-performance, full-stack **Retrieval-Augmented Generation (RAG)** chatbot 
 
 ### Document Ingestion & Vector Storage
 ![Upload and Ingestion Modal](public/screenshot_upload.png)
-## 🔗 Live Demo
-**[Try it live →](https://rag-chatbot-showcase.vercel.app)**
+## 🚀 Run It Yourself
+> This project uses **Ollama** for local model inference — no cloud deployment. Clone and run locally to try it.
 
 ## ✨ Features
 - **📂 Document Collections** — Create custom document scopes (e.g. `finance_q4`, `hr_policies`) and easily switch between them.
