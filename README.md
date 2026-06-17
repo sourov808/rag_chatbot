@@ -27,7 +27,7 @@ A high-performance, full-stack **Retrieval-Augmented Generation (RAG)** chatbot 
 - **Framework:** Next.js (App Router) + TypeScript
 - **RAG & Agent Orchestration:** **LangChain** (Core, Community, Text Splitters)
 - **Vector DB Clients:** `@qdrant/js-client-rest`, `@pinecone-database/pinecone`
-- **Supported Models:** `@chain/google-genai` (Gemini), `@langchain/groq`, `@langchain/ollama`
+- **Supported Models:** `@langchain/google-genai` (Gemini), `@langchain/groq`, `@langchain/ollama`
 - **Document Parser:** `pdf-parse`
 - **Styling:** Tailwind CSS v4
 
